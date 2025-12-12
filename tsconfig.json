@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",        // Versión de JS a generar
+    "module": "commonjs",      // Sistema de módulos de Node
+    "outDir": "./dist",        // Carpeta de salida
+    "rootDir": "./src",        // Carpeta de código fuente
+    "strict": true,            // Activa todas las comprobaciones estrictas
+    "esModuleInterop": true,   // Para compatibilidad con importaciones de JS
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "include": ["src"],          // Archivos TS a compilar
+  "exclude": ["node_modules"]  // Archivos a ignorar
+}
