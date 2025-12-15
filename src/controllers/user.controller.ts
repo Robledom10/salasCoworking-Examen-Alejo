@@ -49,7 +49,7 @@ export const userController = {
 
         const deleted = await userService.usersDelete(parseInt(id))
 
-        return res.json({ message: "USER eliminado" });
+        return res.json({ message: "USER eliminado", deleted });
     }
 }
 
