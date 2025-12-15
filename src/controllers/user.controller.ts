@@ -11,7 +11,7 @@ export const userController = {
     getUsersById: async (req: Request, res: Response) => {
         const id = parseInt(req.params.id);
 
-        const users = await userService.getUsersById;
+        const users = await userService.getUsersById(id);
 
         if (!users) {
             return res.status(404).json({ message: "USERS no encontrados" })
