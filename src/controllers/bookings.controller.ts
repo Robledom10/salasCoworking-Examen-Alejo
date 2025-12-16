@@ -36,7 +36,7 @@ export const bookingController = {
 
     },
 
-    postRooms: async (req: Request, res: Response) => {
+    postBookings: async (req: Request, res: Response) => {
         const body: Omit<Booking, "id"> = req.body;
 
         const booking = await bookingService.postBooking(body);
@@ -45,7 +45,7 @@ export const bookingController = {
 
     },
 
-    updateRooms: async (req: Request, res: Response) => {
+    updateBookings: async (req: Request, res: Response) => {
         const id = parseInt(req.params.id);
         const { userId, roomId, date, startTime, endTime } = req.body;
 
@@ -60,7 +60,7 @@ export const bookingController = {
         });
     },
 
-    deleteRooms: async (req: Request, res: Response) => {
+    deleteBookings: async (req: Request, res: Response) => {
         const { id } = req.params;
 
         const deleted = await bookingService.deleteBooking(parseInt(id))

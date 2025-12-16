@@ -16,3 +16,5 @@ export const createBookingSchema = z.object({
         path: ["endTime"],
     }
 );
+
+export const updateBookingSchema = createBookingSchema.partial();
